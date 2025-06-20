@@ -5,7 +5,14 @@ public class MainMenu : MonoBehaviour
 {
     public void StartGame()
     {
-        // Load your gameplay scene, replace "GameScene" with your scene's name
+        // Lock the cursor and hide it for gameplay
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+
+        // Just in case — resume time
+        Time.timeScale = 1f;
+
+        // Load your gameplay scene
         SceneManager.LoadScene("LevelOne");
     }
 
